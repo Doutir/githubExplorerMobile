@@ -1,14 +1,7 @@
 import React from 'react';
 import { WebView } from 'react-native-webview';
 
-interface IssueWebViewProps {
-  route: {
-    link: string;
-  };
-}
-const IssueWebView: React.FC<IssueWebViewProps> = ({
-  route,
-}: IssueWebViewProps) => {
+const IssueWebView: React.FC = ({ route }) => {
   const { link } = route.params;
   return <WebView source={{ uri: link }} />;
 };

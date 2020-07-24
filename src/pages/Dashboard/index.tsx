@@ -54,20 +54,13 @@ const Dashboard: React.FC = () => {
         description: response.data.description,
         avatarUrl: response.data.owner.avatar_url,
       };
-      console.log(newRepo);
 
       SetRepositories([...repositories, newRepo]);
       setInputValue('');
-      // SetInputerror('');
     } catch (err) {
-      // SetInputerror('Erro ao buscar por Repositório');
+      Alert.alert('Erro', 'Erro ao buscar por Repositório');
     }
   }, [inputValue, repositories]);
-  async function limpaBagulho(): Promise<void> {
-    SetRepositories([]);
-    await AsyncStorage.removeItem('@GithubExplorer:repositories');
-    console.log('limpado tixinha');
-  }
 
   return (
     <Container>
@@ -84,7 +77,6 @@ const Dashboard: React.FC = () => {
             value={inputValue}
           />
           <Button onPress={handleAddRepo}>
-            {/* <Button onPress={() => limpaBagulho()}> */}
             <ButtonText>Pesquisar</ButtonText>
           </Button>
         </View>

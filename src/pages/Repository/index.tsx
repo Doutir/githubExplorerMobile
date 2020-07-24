@@ -49,15 +49,10 @@ interface Issue {
     avatar_url: string;
   };
 }
-interface RepositoryProps {
-  route: {
-    name: string;
-  };
-}
-const Repository: React.FC<RepositoryProps> = ({ route }) => {
+
+const Repository: React.FC = ({ route }) => {
   const navigation = useNavigation();
   const { name } = route.params;
-  // const name = 'Rocketseat/unform';
   const [repository, SetRepository] = useState<Repository | null>(null);
   const [issues, SetIssues] = useState<Issue[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);

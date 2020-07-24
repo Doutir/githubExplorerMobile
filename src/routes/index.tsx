@@ -23,7 +23,7 @@ const Routes: React.FC = () => {
         <Stack.Screen
           name="IssueWebView"
           component={IssueWebView}
-          options={{ headerShown: true, headerTitle: 'Issue Na Web' }}
+          options={{ headerShown: true, headerTitle: 'Página Da Issue' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
