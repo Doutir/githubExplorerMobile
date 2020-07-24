@@ -23,7 +23,14 @@ const Routes: React.FC = () => {
         <Stack.Screen
           name="IssueWebView"
           component={IssueWebView}
-          options={{ headerShown: true, headerTitle: 'Página Da Issue' }}
+          options={{
+            headerShown: true,
+            headerTitle: 'Página Da Issue',
+            headerStyle: {
+              backgroundColor: '#24292e',
+            },
+            headerTintColor: '#fff',
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>

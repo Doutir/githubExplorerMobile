@@ -66,11 +66,15 @@ const Dashboard: React.FC = () => {
     <Container>
       <Image source={logoImg} />
       <Title>Explore repositórios no Github</Title>
-      <ScrollView style={{ flex: 1 }}>
+      <ScrollView
+        style={{ flex: 1 }}
+        showsHorizontalScrollIndicator={false}
+        showsVerticalScrollIndicator={false}
+      >
         <View style={{ flexDirection: 'row' }}>
           <Input
             placeholder="Digite Aqui"
-            autoCapitalize="characters"
+            autoCapitalize="sentences"
             returnKeyType="send"
             onSubmitEditing={handleAddRepo}
             onChangeText={text => setInputValue(text)}
